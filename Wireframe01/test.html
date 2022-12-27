@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>ハンバーガーメニューの作り方</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @charset "UTF-8";
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    header {
+      height: 60px;
+      line-height: 60px;
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    a {
+      color: #333333;
+      text-decoration: none;
+      display: block;
+    }
+
+    ul li {
+      list-style: none;
+      width: 100px;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: space-around;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    @media screen and (max-width: 768px) {
+
+      .menu {
+        display: block;
+      }
+
+
+      /**レスポンシブにした時のナビの見せ方**/
+      header nav {
+        display: none;
+        /*position: fixed;
+        width: 300px;
+        top: 0;
+        right: -300px;
+        background-color: rgba(33, 33, 33, .9);
+        height: 100%;
+        padding-top: 60px;*/
+      }
+
+      header nav ul li {
+        width: 100%;
+      }
+
+      header nav ul li a {
+        color: #ffffff;
+        padding-left: 20px;
+      }
+
+      header .btn-gnavi {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 30px;
+        height: 24px;
+        z-index: 3;
+        cursor: pointer;
+        transition: all 400ms;
+        -webkit-transition: all 400ms;
+      }
+
+      header .btn-gnavi span {
+        position: absolute;
+        width: 30px;
+        height: 4px;
+        background: #666;
+        border-radius: 10px;
+        -webkit-transition: all 400ms;
+        transition: all 400ms
+      }
+
+      header .btn-gnavi span:nth-child(1) {
+        top: 0;
+      }
+
+      header .btn-gnavi span:nth-child(2) {
+        top: 10px;
+      }
+
+      header .btn-gnavi span:nth-child(3) {
+        top: 20px;
+      }
+
+      header .btn-gnavi.hb-open {
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+      }
+
+      header .btn-gnavi.hb-open span {
+        background: #fff;
+      }
+
+      header .btn-gnavi.hb-open span:nth-child(1) {
+        width: 24px;
+        transform: translate(-7px, 17px) rotate(45deg);
+        -webkit-transform: translate(-7px, 17px) rotate(45deg);
+      }
+
+      header .btn-gnavi.hb-open span:nth-child(3) {
+        width: 24px;
+        transform: translate(-7px, -17px) rotate(-45deg);
+        -webkit-transform: translate(-7px, -17px) rotate(-45deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <p class="btn-gnavi">
+      <span></span>
+      <span></span>
+      <span></span>
+    </p>
+    <nav id="global-navi">
+      <ul class="menu">
+        <li><a href="#">トップ</a></li>
+        <li><a href="#">会社概要</a></li>
+        <li><a href="#">ニュース</a></li>
+        <li><a href="#">アクセス</a></li>
+        <li><a href="#">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
+  <script>
+ document.querySelectorAll('.btn-gnavi').forEach(item => {
+      item.addEventListener('click', event => {
+        var rightVal = 0;
+        if (item.classList.contains('hb-open')) {
+          rightVal = -768;
+          item.classList.remove('hb-open');
+        }else{
+          item.classList.add('hb-open');
+        }
+
+        var effect = 'slide';
+        var options = { direction: 'left' };
+        var duration = 500;
+        document.getElementById("global-navi").toggle(effect, options, duration);
+    
+        //document.getElementById("global-navi").toggle('slide', {
+        //  direction: 'left'
+        //}, 1000)
+      });
+    });
+  </script>
+  <!--<script>
+    document.querySelector('.btn-gnavi').addEventListener('click', event => {
+      var rightVal = 0;
+      if (document.querySelector('.btn-gnavi').classList.contains('hb-open')) {
+        rightVal = -768;
+        document.querySelector('.btn-gnavi').classList.remove('hb-open');
+      } else {
+        document.querySelector('.btn-gnavi').classList.add('hb-open');
+      }
+
+var slideOpen = true;
+var rightChecked = false;
+var initright = 0;
+var intval = null;
+
+function slideToggle() {
+    window.clearInterval(intval);
+    var mdiv = document.getElementById('global-navi');
+    if(!rightChecked) {
+        initright = mdiv.offsetLeft;
+        rightChecked = true;
+    }
+    if(slideOpen) {
+        var h = initright;
+        slideOpen = false;
+        intval = setInterval(function(){
+			  h--;
+        console.log(h--);
+			  mdiv.style.right = h + 'px';
+			  if(h >= 0)
+				  window.clearInterval(intval);
+			  } ,1);
+    }
+    else {
+        var h = 0;
+      slideOpen = true;
+	    intval = setInterval(function(){
+			h++;
+			mdiv.style.right = h + 'px';
+			if(h >= initright)
+				window.clearInterval(intval);
+			}, 1
+		);
+    }
+}
+
+slideToggle();
+
+      //function foo() {
+      //  setInterval(function () {
+      //   var gnav = document.getElementById("global-navi");
+      //    gnav.style.right = rightVal;
+      //  }, 500);
+      //}
+      //foo();
+
+      //document.getElementById("global-navi").setTimeout(function () {
+      //  right: rightVal
+      //}, 500)
+    });
+  </script>-->
+</body>
+
+</html>

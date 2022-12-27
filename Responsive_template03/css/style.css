@@ -1,0 +1,276 @@
+@font-face {
+  font-family: 'Chivo';
+  font-weight: 300;
+  src: url('../font/Chivo-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Chivo';
+  font-weight: 400;
+  src: url('../font/Chivo-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Chivo';
+  font-weight: 700;
+  src: url('../font/Chivo-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'CGTimes';
+  font-weight: 700;
+  src: url('../font/CGTimesBold.ttf');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Chivo', sans-serif;
+  font-size: 16px;
+}
+
+.clearfix::after {
+  display: table;
+  clear: both;
+  content: '';
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.l-inner {
+  width: 98%;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+/* mainvisual */
+.sec-mv {
+  padding: 20px 0 106px;
+  background: url('../img/img_mv_bg.jpg') no-repeat center/cover;
+}
+
+.sec-mv .header {
+  margin-bottom: 200px;
+}
+
+.sec-mv .header-logo {
+  float: left;
+}
+
+.sec-mv .gnav {
+  float: right;
+  padding: 14px 0;
+}
+
+.sec-mv .gnav ul li {
+  float: left;
+  margin-right: 70px;
+}
+
+.sec-mv .gnav ul li:last-child {
+  margin-right: 0;
+}
+
+.sec-mv .gnav ul li a {
+  color: #000000;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.sec-mv .gnav ul li a.active,
+.sec-mv .gnav ul li a:hover {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.sec-mv .menu-icon {
+  display: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .l-inner {
+    width: 100%;
+    padding: 0 40px;
+    max-width: 100%;
+  }
+
+  .sec-mv .menu-icon {
+    float: right;
+    margin: 9px 0px;
+  }
+
+  .sec-mv .menu-icon,
+  .sec-mv .menu-icon span {
+    display: inline-block;
+    transition: all .4s;
+  }
+
+  .sec-mv .menu-icon {
+    position: relative;
+    z-index: 9999;
+    width: 52px;
+    height: 34px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    appearance: none;
+  }
+
+  .sec-mv .menu-icon span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+  }
+
+  .sec-mv .menu-icon span:nth-of-type(1) {
+    top: 0;
+  }
+
+  .sec-mv .menu-icon span:nth-of-type(2) {
+    top: 15px;
+  }
+
+  .sec-mv .menu-icon span:nth-of-type(3) {
+    bottom: 0;
+  }
+
+  .sec-mv .menu-icon.active span:nth-of-type(1) {
+    transform: translateY(15px) rotate(-45deg);
+  }
+
+  .sec-mv .menu-icon.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .sec-mv .menu-icon.active span:nth-of-type(3) {
+    transform: translateY(-15px) rotate(45deg);
+  }
+
+  .sec-mv .gnav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    text-align: right;
+    transition: all .4s;
+  }
+
+  .sec-mv .gnav.active {
+    width: 376px;
+  }
+
+  .sec-mv .gnav ul {
+    padding: 107px 40px 35px;
+  }
+
+  .sec-mv .gnav ul li {
+    float: none;
+    margin-right: 0;
+    margin-bottom: 65px;
+  }
+
+  .sec-mv .gnav ul li a {
+    font-size: 40px;
+  }
+
+}
+
+@media screen and (max-width: 767.9px) {
+  .l-inner {
+    width: 100%;
+    padding: 0 20px;
+    max-width: 100%;
+  }
+
+  .sec-mv .menu-icon {
+    float: right;
+    margin: 9px 0px;
+  }
+
+  .sec-mv .menu-icon,
+  .sec-mv .menu-icon span {
+    display: inline-block;
+    transition: all .4s;
+  }
+
+  .sec-mv .menu-icon {
+    position: relative;
+    z-index: 9999;
+    width: 48px;
+    height: 30px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    appearance: none;
+  }
+
+  .sec-mv .menu-icon span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+  }
+
+  .sec-mv .menu-icon span:nth-of-type(1) {
+    top: 0;
+  }
+
+  .sec-mv .menu-icon span:nth-of-type(2) {
+    top: 14px;
+  }
+
+  .sec-mv .menu-icon span:nth-of-type(3) {
+    bottom: 0;
+  }
+
+  .sec-mv .menu-icon.active span:nth-of-type(1) {
+    transform: translateY(14px) rotate(-45deg);
+  }
+
+  .sec-mv .menu-icon.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .sec-mv .menu-icon.active span:nth-of-type(3) {
+    transform: translateY(-14px) rotate(45deg);
+  }
+
+  .sec-mv .gnav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    text-align: right;
+    transition: all .4s;
+  }
+
+  .sec-mv .gnav.active {
+    width: 100%;
+  }
+
+  .sec-mv .gnav ul {
+    padding: 107px 40px 35px;
+  }
+
+  .sec-mv .gnav ul li {
+    float: none;
+    margin-right: 0;
+    margin-bottom: 65px;
+  }
+
+  .sec-mv .gnav ul li a {
+    font-size: 40px;
+  }
+}

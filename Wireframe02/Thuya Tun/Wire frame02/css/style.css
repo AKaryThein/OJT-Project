@@ -1,0 +1,100 @@
+* {
+  margin: 10;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.head {
+  margin: 5px;
+  padding: 40px;
+  background-color: gray;
+  color: #fff;
+  text-align: center;
+}
+
+.nav {
+  margin: 5px;
+  padding: 10px;
+  background-color: gray;
+  color: #fff;
+  text-align: center;
+}
+
+.footer {
+  margin: 5px;
+  padding: 10px;
+  background-color: gray;
+  color: #fff;
+  text-align: center;
+}
+
+.left-side {
+  float: left;
+  width: 70%;
+  margin: 5px 0px;
+  color: #fff;
+  text-align: center;
+}
+
+.para {
+  margin: 5px;
+  padding: 100px;
+  background-color: gray;
+}
+
+.right-side {
+  float: right;
+  width: 30%;
+  margin: 5px 0px;
+  color: #fff;
+  text-align: center;
+}
+
+.para1 {
+  margin: 5px;
+  padding: 65px;
+  background-color: gray;
+}
+
+.para2 {
+  margin: 5px;
+  padding: 80px;
+  background-color: gray;
+  color: #fff;
+  text-align: center;
+}
+
+.para3 {
+  float: left;
+  width: 47%;
+  margin: 5px;
+  padding: 50px;
+  background-color: gray;
+  color: #fff;
+  text-align: center;
+}
+
+.para4 {
+  float: right;
+  width: 47%;
+  margin: 5px;
+  padding: 50px;
+  background-color: gray;
+  color: #fff;
+  text-align: center;
+}
+
+.para5 {
+  clear: both;
+  margin: 5px;
+  padding: 15px;
+  background-color: gray;
+  color: #fff;
+  text-align: center;
+}
+
+.clearfix::after {
+  display: table;
+  clear: both;
+  content: '';
+}
