@@ -1,0 +1,36 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@font-face {
+  font-family: "Georgia";
+  src: url("/dist/font/Georgia.ttf");
+}
+
+body {
+  @apply select-none overflow-x-hidden;
+}
+
+.gnav {
+  @apply absolute top-20 right-[-100vw] z-10 w-full bg-black transition-all duration-1000 ease-out;
+}
+
+.gnav.is-show {
+  @apply right-0;
+}
+
+.cmn-ttl {
+  @apply relative mb-10 text-center before:absolute before:inset-x-0 before:top-2/4 before:h-1 before:w-full before:bg-primary;
+}
+
+.cmn-ttl > span {
+  @apply relative z-10 inline-block rounded-lg bg-primary p-2 text-xl text-white md:p-3 md:text-3xl;
+}
+
+.service-card {
+  @apply block bg-white p-3 text-center  hover:bg-secondary-500 md:px-5 md:pt-5 md:pb-3;
+}
+
+.work-card {
+  @apply block border-5 border-solid border-white hover:border-secondary-500;
+}
