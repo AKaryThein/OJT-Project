@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+/*testimonial-block*/
+.testimonial-block,
+.testing-block{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:chocolate;
+  color: #fff;
+}
+
+.testimonial-block img,
+.testing-block img {
+  vertical-align: bottom;
+}
+
+.testimonial-blockquote {
+  max-width: 60%;
+  padding: 0 20px;
+}
+
+.testimonial-image,
+.testing-image {
+  max-width: 40%;
+}
+
+.testimonial-text,
+.testing-text {
+  font-size: 25px;
+  line-height: 1.2;
+}
+
+.testimonial-author {
+  font-size: 16px;
+  font-weight: 700;
+}

@@ -1,0 +1,22 @@
+.widget {
+  margin: 0 0 1.5rem;
+  .widget-title {
+    &::before {
+      content: '\f047';
+      font-family: fontawesome;
+    }
+  }
+  ul {
+    li {
+      &::before {
+        content: '\f047';
+        font-family: fontawesome;
+      }
+    }
+  }
+  /* Make sure select elements fit in widgets. */
+  select {
+    margin: 1rem;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,261 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  word-break: break-all;
+}
+
+.inner {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+  vertical-align: bottom;
+  max-width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Common Title */
+.cmn-ttl {
+  padding-bottom: 30px;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Header CSS */
+.site-branding {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.header-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 50%;
+}
+
+.site-title {
+  padding: 0 10px;
+  font-weight: 700;
+}
+
+.main-navigation {
+  width: 50%;
+}
+
+.main-navigation ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-navigation ul li {
+  line-height: 1.2;
+}
+
+.main-navigation ul li+li {
+  margin-left: 20px;
+}
+
+/* Content CSS */
+main {
+  width: 75%;
+}
+
+aside {
+  width: 20%;
+}
+
+/* Sidebar Widget CSS */
+.widget-area h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.widget-area ul {
+  padding: 10px 20px 20px !important;
+}
+
+.widget-area ul li {
+  line-height: 1.2;
+  padding-bottom: 5px;
+}
+
+.widget-area ul li a{
+  display: inline-block;
+}
+
+/* Page CSS */
+.entry-meta {
+  padding-bottom: 10px;
+}
+
+.post-thumbnail {
+  text-align: center;
+}
+
+.entry-content p {
+  line-height: 1.2;
+  padding: 10px 0;
+}
+
+/* Category List */
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list li {
+  width: 30%;
+  margin-right: 5%;
+  margin-bottom: 2%;
+}
+
+.list li:nth-child(3n) {
+  margin-right: 0;
+}
+
+.post-ttl {
+  padding-bottom: 10px;
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.thumbnail-img {
+  text-align: center;
+}
+
+.list .thumbnail-img img {
+  width: 100px;
+  height: 100px;
+}
+
+.post-content {
+  display: -webkit-box;
+  line-height: 1.2;
+  overflow: hidden;
+  margin: 10px 0;
+  color: #000;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* 404 page */
+.page-content p{
+  padding: 10px 0;
+  line-height: 1.2;
+}
+
+/* List Pagination */
+.wp-pagenavi {
+  text-align: center;
+}
+
+.wp-pagenavi a{
+  display: inline-block;
+}
+
+/* Single Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.pagination a{
+  display: inline-block;
+}
+
+/* Footer CSS */
+.site-footer .footer-widgets {
+  display: flex;
+}
+
+.site-footer .footer-widgets #menu-footer-menu {
+  padding: 0 20px;
+}
+
+.site-info {
+  padding: 20px 0;
+}
+
+.site-copy {
+  line-height: 1.2;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Custom Block Testimonial */
+.testimonial-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:chocolate;
+  color: #fff;
+}
+
+.testimonial-block img {
+  vertical-align: bottom;
+}
+
+.testimonial-blockquote {
+  max-width: 60%;
+  padding: 0 20px;
+}
+
+.testimonial-image {
+  max-width: 40%;
+}
+
+.testimonial-text {
+  font-size: 25px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.testimonial-author {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* Post Formats Design*/
+.format-aside {
+  background-color: bisque;
+  padding: 20px;
+}
+
+.format-gallery {
+  background-color:cadetblue;
+  padding: 20px;
+}
+
+
+.size-auto, 
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+	max-width: 100%;
+	height: auto;
+}

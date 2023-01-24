@@ -1,0 +1,38 @@
+.site {
+  overflow: hidden;
+  padding: 0 $size__site-padding;
+  .site-header {
+    clear: both;
+    display: inline-block;
+    width: $size__site-full;
+  }
+  .site-content {
+    display: flex;
+    @include respond-to() {
+      display: inline-block;
+    }
+    .content-area {
+      display: inline-block;
+      width: $size__site-full - $size__site-sidebar;
+      @include respond-to() {
+        width: $size__site-full;
+      }
+      .site-main {
+        margin: 0;
+      }
+    }
+    .widget-area {
+      display: inline-block;
+      overflow: hidden;
+      width: $size__site-sidebar;
+      @include respond-to() {
+        width: $size__site-full;
+      }
+    }
+  }
+  .site-footer {
+    clear: both;
+    display: inline-block;
+    width: $size__site-full;
+  }
+}
