@@ -1,45 +1,44 @@
 <template>
   <div class="inner">
     <h1 class="ttl">How fast can you catch me ?</h1>
-    <button class="play-btn" @click="showContent" :disabled="isPlaying">
-      Play
-    </button>
+    <button class="play-btn" @click="start" :disabled="isPlaying">Play</button>
     <div v-if="isPlaying">
-      <Block :delay="delay" @endGame="end" />
+      <Block :delay="delay" @endGame="endGame" />
     </div>
-    <div v-if="isEnd">
+    <div v-if="end">
       <Result :score="score" />
     </div>
   </div>
 </template>
 
 <script>
-import Block from "./components/BlockComponent.vue";
-import Result from "./components/ResultComponent.vue";
+import Block from "./components/BlockComponent.vue.BK";
+import Result from "./components/ResultComponent.vue.bk";
+
 export default {
   name: "App",
+  components: {
+    Block,
+    Result,
+  },
   data() {
     return {
       isPlaying: false,
       delay: null,
-      isEnd: false,
       score: 0,
+      end: false,
     };
   },
   methods: {
-    showContent() {
+    start() {
       this.isPlaying = true;
-      this.delay = 2000 + Math.random() * 5000;
+      this.delay = 2000 + Math.random() * 5000; // 2 to 5s
     },
-    end(score) {
+    endGame(score) {
       this.score = score;
       this.isPlaying = false;
-      this.isEnd = true;
+      this.end = true;
     },
-  },
-  components: {
-    Block,
-    Result,
   },
 };
 </script>
