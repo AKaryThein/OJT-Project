@@ -1,0 +1,34 @@
+include ../datas/data 
+include ../mixins/mixin
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title BonAppetit
+    link(rel="stylesheet", href="css/reset.css")
+    link(rel="stylesheet", href="css/style.css")
+  body 
+    block mv 
+      section.sec-mv
+        block header
+          include ../includes/header
+        block mvContent
+          include mv-content-layout
+    
+    block book 
+      include book-layout
+
+    block menu 
+      include menu-layout
+
+    block chefs 
+      include chefs-layout
+    
+    block blogs 
+      include blogs-layout
+
+    block footer 
+      include ../includes/footer

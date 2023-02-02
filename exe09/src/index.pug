@@ -1,0 +1,6 @@
+extends templates/layout
+
+block lists
+  ul.cake-lists
+    each cakes in cakeLists
+      +showLists(cakes.image,cakes.cakeName,cakes.cakePrice)

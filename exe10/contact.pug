@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Contact Form
+    link(rel="stylesheet", href="style.css")
+  body 
+    h1 Contact Form 
+    form(action="thankyou.php" method="post")
+      div.col
+        label Name
+        input(type="text", name="uname")
+      div.col
+        label Email
+        input(type="email", name="email")
+      div.col
+        label Message
+        textarea(name="msg", cols="30", rows="10") 
+      .col 
+        button(type="submit") Send

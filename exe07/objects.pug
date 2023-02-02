@@ -1,0 +1,40 @@
+- 
+  const friendLists = [
+    {
+      firstName: 'Akary',
+      lastName: 'Thein',
+      age: 22
+    },
+    {
+      firstName: 'Myint',
+      lastName: 'Marlar',
+      age: 21
+    },
+    {
+      firstName: 'Khin Linn',
+      lastName: 'Thu',
+      age: 20
+    },
+  ]
+h2 Friend Lists
+
+h3 equal sign
+ol 
+  each lists in friendLists
+    li 
+      p= "Frist Name: " + lists.firstName
+      p= "Last Name: " + lists.lastName 
+      p= "Age: " + lists.age
+
+h3 Concatenation 
+ol 
+  each lists in friendLists
+    li= "Frist Name: "  + lists.firstName + " Last Name: " + lists.lastName + " Age: " + lists.age  
+
+h3 ` Sign 
+ol 
+  each lists in friendLists
+    li= `First Name: ${lists.firstName} Last Name: ${lists.lastName} Age: ${lists.age}`
+  else 
+    li Oh no ! u don't have friend list.
+

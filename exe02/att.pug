@@ -1,0 +1,26 @@
+doctype html 
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+  body 
+    input(type="password", name="psw",data-js=`${5 > 2 ? "OK" : "NOT OK"}`)
+
+    input(type="text", name="txt",disabled)
+
+    // class names with js
+    - const myClasses = ["class1", "class2", "class3"]
+    div(class=myClasses)
+
+    // Styles with js
+    -const myStyles = {'color':'white','background':'pink','width':'100%','height':'20px'}
+    div(style=myStyles)
+
+    //Attributes with js
+    - const attr = {'src':'image01.png' , 'alt':'image01'}
+    img&attributes(attr)
+
+
+    

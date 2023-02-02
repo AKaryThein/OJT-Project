@@ -1,0 +1,32 @@
+mixin showFriendList(friend) 
+  li
+    p= friend.firstName
+    p= friend.lastName
+    p= friend.age
+
+- 
+  const friendLists = [
+    {
+      firstName: 'Akary',
+      lastName: 'Thein',
+      age: 22
+    },
+    {
+      firstName: 'Myint',
+      lastName: 'Marlar',
+      age: 21
+    },
+    {
+      firstName: 'Khin Linn',
+      lastName: 'Thu',
+      age: 20
+    },
+  ]
+
+ul 
+  each fri in friendLists
+    +showFriendList(fri)
+    +showFriendList(fri)   
+    
+
+    

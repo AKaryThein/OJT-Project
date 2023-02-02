@@ -1,0 +1,22 @@
+//- Menu List
+mixin showMenuList(image,title,desc)
+  li.clearfix
+    p.img-blk
+      img(src=`img/img_${image}.png`, alt=`${title}`)
+    .txt-blk
+      h3.menu-ttl #{title}
+      p #{desc}
+
+//- Chefs List
+mixin showChefList(image,name,role,desc)
+  li
+    img(src=`img/img_${image}.png`, alt=`${name}${role}`)
+    h3.chef-name #{name}
+      span #{role}
+    p #{desc}
+
+//- Blogs List
+mixin showBlogList(image,desc)
+  li
+    img(src=`img/img_${image}.png`, alt=`${desc}`)
+    p #{desc}

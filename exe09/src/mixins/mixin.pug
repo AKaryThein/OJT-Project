@@ -1,0 +1,10 @@
+mixin showPageNo(pageNum)
+  li 
+    a(href="#") #{pageNum}
+
+mixin showLists(image,name,price)
+  li 
+    p.list-img
+      img(src=`./img/img_${image}.jpg`, alt=`${name}`)
+    h3.name #{name}
+    p.price #{price}

@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+  body 
+    //- Pending In_Transit Completed
+    - const orderStaus = "Pending"
+
+    case orderStaus
+      when "Pending"
+        // Order Status is Pending 
+        p Your order has been place and will be sent shortly.
+
+      when "In_Transit"
+        // Order Status is In_Transit 
+        p You order is on the move - you should receive it soon !
+
+      when "Completed"
+        // Order Status is Completed       
+        p Your order has been completed.
+
+      default 
+        // Order Status is other
+        p Sorry ! We aren't sure what happened with your order...
+
+

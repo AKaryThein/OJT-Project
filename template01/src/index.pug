@@ -1,0 +1,16 @@
+extends templates/layout
+
+block menulist 
+  ul.menu-list.clearfix 
+    each menu in menuList
+      +showMenuList(menu.image,menu.title,menu.desc)
+
+block chefslist 
+  ul.chefs-list.clearfix 
+    each chef in chefsList
+      +showChefList(chef.image,chef.name,chef.role,chef.desc)
+
+block blogslist 
+  ul.blogs-list.clearfix 
+    each blog in blogsList
+      +showBlogList(blog.image,blog.desc)

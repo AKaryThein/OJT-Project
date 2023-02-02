@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "browser-sync": "^2.27.11",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-copy": "^4.0.1",
+    "gulp-livereload": "^4.0.2",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "imagemin": "^7.0.1",
+    "node-sass": "^8.0.0",
+    "sass": "^1.57.1",
+    "sass-loader": "^13.2.0"
+  },
+  "name": "template01",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
